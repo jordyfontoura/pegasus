@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:nuxt/recommended",
+    "prettier"
+  ],
+  "plugins": [
+  ],
+  // add your custom rules here
+  "rules": {
+    "semi": "warn",
+    "no-useless-constructor": "off",
+    "no-dupe-class-members": "off",
+    "lines-between-class-members": "warn",
+    "no-new": "off",
+    "dot-notation": "off"
+  }
+}
