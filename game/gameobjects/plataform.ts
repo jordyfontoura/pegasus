@@ -7,7 +7,7 @@ import { Retangulo } from '~/utils/retangulo'
 export class Plataform extends GameObject {
   size = new Vetor(30, 1)
   despertar() {
-    this.velocidade = new Vetor(0, -10)
+    this.velocidade = new Vetor(0, -20)
 
   }
 
@@ -21,7 +21,7 @@ export class Plataform extends GameObject {
 
   tick(){
     this.fisica()
-    this.velocidade = this.velocidade.add(0, -1 / this.Jogo.fps)
+    // this.velocidade = this.velocidade.add(0, -1 / this.Jogo.fps)
   }
 
   emCima(player: Player) {

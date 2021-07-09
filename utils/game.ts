@@ -1,6 +1,5 @@
 import { Cenario } from './cenario'
 import Aleatorizar from './random'
-import { Retangulo } from './retangulo'
 import { Tela } from './tela'
 import { esperar } from './tempo'
 import { Vetor } from './vetor'

@@ -6,11 +6,28 @@ export class Tela {
   escala: Vetor
   largura: number
   altura: number
-  constructor(private game: GameEngine, private ctx: CanvasRenderingContext2D) {
+  constructor(private game: GameEngine, public ctx: CanvasRenderingContext2D) {
     this.largura = ctx.canvas.width
     this.altura = ctx.canvas.height
-    this.escala = new Vetor(1,1)
+    this.escala = new Vetor(1, 1)
   }
+
+  triangulo(posição: Vetor, size: Vetor) {
+    this.ctx.beginPath()
+    const finalPos = this.toCanvasSpace(posição)
+    this.ctx.moveTo(finalPos.x, finalPos.y)
+    this.ctx.lineTo(finalPos.x+size.x/2, finalPos.y+3*size.y/2)
+    this.ctx.lineTo(finalPos.x-size.x/2, finalPos.y+3*size.y/2)
+    this.ctx.fill()
+  }
+
+  circulo(posição: Vetor, size: Vetor) {
+    this.ctx.beginPath()
+    const finalPos = this.toCanvasSpace(posição)
+    this.ctx.arc(finalPos.x, finalPos.y+size.y, size.x / 2, 0, 2 * Math.PI)
+    this.ctx.fill()
+  }
+
 
   preencher(retangulo: Retangulo, fillStyle?: string) {
     const tmp = this.ctx.fillStyle
