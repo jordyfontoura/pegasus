@@ -49,6 +49,7 @@ export class GameEngine {
       this,
       canvas.getContext('2d') as CanvasRenderingContext2D
     )
+    this.tela.ctx.fillStyle="white"
   }
 
   static criar(canvas: HTMLCanvasElement) {
