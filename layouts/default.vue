@@ -56,10 +56,8 @@ body,
   justify-content: center;
   img {
     width: 30%;
-    opacity: 50%;
-    // height: 10%;
+    opacity: 60%;
   }
-  // margin-bottom: -20%;
 }
 .rodape {
   display: flex;
