@@ -56,7 +56,7 @@ body,
   justify-content: center;
   img {
     width: 30%;
-    opacity: 60%;
+    opacity: 0.6;
   }
 }
 .rodape {
