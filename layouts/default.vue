@@ -48,7 +48,7 @@ body,
   font-family: 'Roboto';
 }
 .menu-space {
-  height: 8vh;
+  height: 7vh;
 }
 .cabeçalho {
   display: flex;
@@ -70,7 +70,7 @@ body,
   position: fixed;
   width: 100%;
   box-shadow: inset 0px 60px 10px -20px #141414;
-  height: 8vh;
+  height: 7vh;
   // background-color: #ffffff;
   a {
     color: #fff;

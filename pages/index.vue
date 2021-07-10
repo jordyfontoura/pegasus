@@ -28,7 +28,7 @@ export default Vue.extend({
 
 <style lang="scss">
   .hero{
-    height: 92vh;
+    height: 93vh;
   }
   main{
     section{
@@ -43,7 +43,7 @@ export default Vue.extend({
           padding: 0 20px;
         }
       }
-      height: 92vh;
+      height: 93vh;
       display: flex;
       flex-direction: column;
       .image{

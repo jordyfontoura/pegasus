@@ -65,15 +65,13 @@ export class Player extends GameObject {
       this.input[ev.key] = 0
     })
     document.addEventListener('mousedown', (ev) => {
-      console.log(ev, this.posição.toString())
-      const mouse = new Vetor(ev.x, ev.y)
+      const mouse = new Vetor(ev.pageX, ev.pageY)
       const canvas = this.Jogo.tela.ctx.canvas
       const distancia = mouse
         .sub(canvas.offsetLeft, canvas.offsetTop)
         .sub(canvas.width / 2, canvas.height / 2)
         .mul(1, -1)
         .sub(this.posição.sub(0, this.size.y)).magnitude
-      console.log({ distancia })
       if (distancia < 10) {
         this.click()
       }
@@ -112,7 +110,7 @@ export class Player extends GameObject {
     }
     if (this.input['w'] === 1 && this.podeSaltar && !this.saltando) {
       this.saltando = true
-      this.velocidade = this.velocidade.add(new Vetor(0, 4000 / 30))
+      this.velocidade = this.velocidade.add(new Vetor(0, 4000*1.5 / 30))
     }
     if (this.velocidade.y <= 0) {
       this.saltando = false
@@ -161,7 +159,7 @@ export class Player extends GameObject {
       return
     }
     this.podeSaltar = this.chaoCooldown.cooldown() ? false : this.podeSaltar
-    this.velocidade = this.velocidade.sub(new Vetor(0, 100 / this.Jogo.fps))
+    this.velocidade = this.velocidade.sub(new Vetor(0, 200 / this.Jogo.fps))
   }
 
   drag() {
